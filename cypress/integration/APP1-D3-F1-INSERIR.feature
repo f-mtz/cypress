@@ -16,7 +16,7 @@ Feature: INSERIR ITENS NA LISTA TO DO
    Background:
       Given que a aplicacao seja acessada
    # @focus
-   # CONCLUIDO
+   # CONCLUIDO -
    #RN 1 - Todo item deve ter uma descrição e uma data
    Scenario Outline: Inserir algum <item> na lista TO DO
       When tentar inserir "<item>" com "<data>"
@@ -27,7 +27,7 @@ Feature: INSERIR ITENS NA LISTA TO DO
          | item inserido | 2020-11-23 | item inserido |
 
    # @focus
-   # CONCLUIDO
+   # CONCLUIDO -
    #RN 2 - Não poder inserir item com menos de 5 caracter
    Scenario Outline: Inserir algum <item> na lista TO DO
       When tentar inserir "<descricao>"
@@ -46,12 +46,13 @@ Feature: INSERIR ITENS NA LISTA TO DO
 
       Examples: Insere itens na lista TO DO Casos
          | item  | data       | resultado     |
-         | valor | 2020-11-23 | item inserido |
+         | vazio | 2020-11-23 | item inserido |
 
    # @focus
    #RN 4 - Não pode inserir item na lista TO DO sem data
+   # CRIEI UM NOVO CENÁRIO POIS A FORMA DE VERIFICAR É DIFERENTE
    # CONCLUIDO -
-   Scenario Outline: Inserir algum <item> na lista TO DO sem data
+   Scenario Outline: Não poder inserir algum <item> na lista TO DO sem data
       When tentar inserir "<item>" sem data
       Then o item não é inserido
 
@@ -62,18 +63,18 @@ Feature: INSERIR ITENS NA LISTA TO DO
 
 #REQUISITOS OBRIGATORIOS
 #CRITERIO ESCOLHER 2 APLICAÇÕES EM https://reactjsexample.com/
-#CRITERIO MAPEAR COM #OK Id, #OK CLass e #ITEM  xPath
+#CRITERIO #OK MAPEAR COM Id, CLass e #ITEM  xPath
 #CRITERIO CENÁRIOS DEVEM CONTER PELO MENOS 3 BOAS PRÁTICAS
 #CRITERIO #OK AS FEATURES DEVEM CLARAS E OBJETIVAS
 #CRITERIO #OK AS REGRAS DEVEM SER CLARAS E FAZER SENTIDO
-#CRITERIO #ITEM  TIRAR SCREEN SHOTS DAS TELAS
-#CRITERIO UTILIZAR PELO MENOS OS COMANDOS GET, SHOULD, CONTAINS, CLICK, #ITEM  CLEAR E TYPE
+#CRITERIO #OK TIRAR SCREEN SHOTS DAS TELAS
+#CRITERIO #OK UTILIZAR PELO MENOS OS COMANDOS GET, SHOULD, CONTAINS, CLICK, CLEAR E TYPE
 
 
 #REQUISITOS EXTRAS x
-#CRITERIO #LIMITE  DE ATÉ 2 APLICAÇÕES (DE FÁCIL MANUSEIO)
-#CRITERIO #ITEM  SALVAR NUM REPOSITÓRIO
-#CRITERIO UTILIZAR O COMANDO PARENT
+#CRITERIO #OK #LIMITE  DE ATÉ 2 APLICAÇÕES (DE FÁCIL MANUSEIO)
+#CRITERIO #OK  SALVAR NUM REPOSITÓRIO
+#CRITERIO #ITEM  UTILIZAR O COMANDO PARENT
 
 
 # LEGENDA/GUIA/MAPA

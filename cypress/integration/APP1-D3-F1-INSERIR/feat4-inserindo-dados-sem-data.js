@@ -1,5 +1,5 @@
 ///<reference types="cypress"/>
-import tester from '../common/TERCEIRO-DESAFIO'
+import tester from '../common/APP1-D3'
 
 
 When('tentar inserir {string} sem data', (item) => {

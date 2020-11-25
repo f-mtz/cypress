@@ -1,5 +1,5 @@
 ///<reference types="cypress"/>
-import tester from '../common/TERCEIRO-DESAFIO'
+import tester from './APP1-D3'
 
 Given('que a aplicacao seja acessada', () => {
   tester.acessaAplicacao()
