@@ -1,0 +1,3 @@
+Erro cypress (mais de um espaçamento antes da regrex (depois da palavra 1)
+
+When(/^desejo realizar uma  "([^"]*)"$/, (operacaoDesejada) => {

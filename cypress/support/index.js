@@ -18,10 +18,21 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 require('./commands')
+require('cypress-xpath')
 
 import './commands'
-   Cypress.on('uncaught:exception', (err, runnable) => {
-   // returning false here prevents Cypress from
- // failing the test
-   return false
-   })
+
+/*
+//DOC/REF  https://docs.cypress.io/api/cypress-api/selector-playground-api.html
+//CONFIG O CÓDIGO A SEGUIR DEFINE A ORDEM DE BUSCA POR PRIORIDADE
+*/
+Cypress.SelectorPlayground.defaults({
+  selectorPriority: ['id', 'class', 'attributes', 'data-cy', 'data-test', 'data-testid', 'tag', 'nth-child']
+})
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // returning false here prevents Cypress from
+  // failing the test
+  return false
+})
+

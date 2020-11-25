@@ -1,0 +1,5 @@
+Scenario Outline é para quando temos vários valores e talvez troca de operações apenas e precisamos testar
+
+Minhas questões sobre Cypress
+
+Como organizar projeto Cypress

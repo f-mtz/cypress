@@ -1,0 +1,16 @@
+Funções da Análise de Requisitos
+
+1 - Identificar o problema OU Objetivo
+2 - Resumir/Simplificar a solução (priorize resolver primeiro)
+3 - Modela (pula)
+4 - Revisar
+
+Como fazer a análise de requisitos? Quais são as informações que você precisa mandar?
+
+requisitos funcionais
+requisitos não funcionais
+
+Detalhes
+Aplicações similares
+
+

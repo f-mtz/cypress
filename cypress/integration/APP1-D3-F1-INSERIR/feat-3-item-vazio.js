@@ -1,0 +1,17 @@
+///<reference types="cypress"/>
+import tester from '../common/TERCEIRO-DESAFIO'
+
+// EM ANDAMENTO - FALTA ENCAPSULAR OS PASSOS (CODIGO)
+When('tentar inserir item com {string}', (data) => {
+  cy.get('#title').as('entrada').type('       ')
+  // cy.get('#Select\ a\ date').type(data)
+  cy.get('.ant-picker').type(data)
+  cy.get('#root > :nth-child(2)').click()
+  cy.get('.ant-form > :nth-child(3) > .ant-btn').as('adicionar').click()
+});
+
+Then('o {string} é alcançado', (resultado) => {
+
+  cy.get('body').should('contain', '      ')
+
+});

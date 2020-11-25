@@ -1,17 +1,18 @@
+   # Organizar itens na lista TO DO
+   # COMO organizador de lista TO DO
+   # DESEJO organizar os itens na minha lista
+   # PARA que eu tenha controle sobre o que preciso fazer
+
 #language: en
-Feature: Organizar itens na lista TO DO
-   COMO organizador de lista TO DO
-   DESEJO organizar os itens na minha lista
-   PARA que eu tenha controle sobre o que preciso fazer
+Feature: Adicionar itens
 
    #Regra: Todo item tem uma descrição
-   Scenario Outline: Novo item <resultado> à lista TO DO
-      Given que não exista nenhum item na lista TO DO
+   Scenario Outline: Novo item "<resultado>" à lista TO DO
+      Given que a aplicacao seja acessada
       When tento adicionar o item "<novo item>"
       Then o item "<resultado>"      
       Examples:
          | novo item           | resultado        | 
-         |                     | não é adicionado | 
          | Fazer projeto final | é adicionado     |
 
    #Regra: É possível ter itens com a mesma descrição
