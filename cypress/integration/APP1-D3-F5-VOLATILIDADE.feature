@@ -6,13 +6,18 @@
 # GERAL - TEMOS 1 CENÁRIOS, COMPORTAMENTOS, REGRAS
 
 #language: en
-Feature: GARANTIR QUE LISTA NÃO GUARDE OS DADOS DO USUÁRIO APÓS RECARREGAR A APLICAÇÃO
+Feature: LIMPAR LISTA
 
   Background:
     Given que a aplicacao seja acessada
   @focus
   # EM ANDAMENTO
-  #RN 1 - Todo item deve ter uma descrição e uma data
-  Scenario: Limpar os itens ao recarregar página
-    When recarregar a aplicação
-    Then os itens são apagados
+  #RN 1 - App não deve armazenar os dados após ser recarregada
+  Scenario Outline: Limpar os itens ao recarregar página
+
+    When inserir "<item>" com a "<data>"
+    Then ao recarregar a aplicação, os itens são apagados
+
+    Examples:
+      | item          | data       |
+      | item inserido | 2020-11-27 |

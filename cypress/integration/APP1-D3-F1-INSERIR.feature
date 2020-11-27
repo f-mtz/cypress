@@ -1,8 +1,4 @@
 # https://todohooks.dfweb.no/#complete
-# STATUS: _
-#CONCLUIDO
-# EM ANDAMENTO
-# ANULADO
 
 # GERAL - TEMOS 3 CENÁRIOS, COMPORTAMENTOS, REGRAS
 
@@ -23,11 +19,11 @@ Feature: INSERIR ITENS NA LISTA TO DO
       Then o "<resultado>" "<sim/não>" inserido na condição: "<condicao>"
 
       Examples: Insere itens na lista TO DO Casos
-         | item          | data       | resultado     | condicao | sim/não | on/off |
-         | item inserido | 2020-11-23 | item inserido | com      | é       |        |
-         | item inserido | data       | item inserido | sem      | não é   | não    |
+         | item          | condicao | data       | resultado     | sim/não | on/off |
+         | item inserido | com      | 2020-11-23 | item inserido | é       |        |
+         | item inserido | sem      | data       | item inserido | não é   | não    |
 
-   @focus
+   # @focus
    # CONCLUIDO -
    #DICA MANTIVE ESSE CENARIO POIS LI QUE É UM BOA PRATICA PODER ANALISAR COMPORTAMENTOS ISOLADAMENTE
    #RN 2 - Não poder inserir item com menos de 5 caracter
@@ -35,19 +31,19 @@ Feature: INSERIR ITENS NA LISTA TO DO
       When tentar inserir "<descricao>"
       Then chegamos ao "<resultado>"
 
-      Examples: Insere itens VAZIOS na lista TO DO Casos
+      Examples:
          | descricao | resultado                  |
          | id        | Length must be more than 5 |
 
    # @focus
    #RN 3 - Inserindo item vazio (burlando)
    # CONCLUIDO -
-   Scenario Outline: Inserir algum <item> na lista TO DO
+   Scenario Outline: Inserir item <vazio> na lista TO DO
       When tentar inserir item com "<data>"
       Then o "<resultado>" é alcançado
 
-      Examples: Insere itens na lista TO DO Casos
-         | item  | data       | resultado     |
+      Examples: Insere item VAZIO na lista TO DO Casos
+         | vazio | data       | resultado     |
          | vazio | 2020-11-23 | item inserido |
 
 

@@ -1,7 +1,4 @@
 # https://todohooks.dfweb.no/#complete
-# STATUS: _
-#CONCLUIDO
-# EM ANDAMENTO
 
 # GERAL - TEMOS 1 CENÁRIOS, COMPORTAMENTOS, REGRAS
 

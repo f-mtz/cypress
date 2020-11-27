@@ -1,7 +1,4 @@
 # https://todohooks.dfweb.no/#complete
-# STATUS: _
-#CONCLUIDO
-# EM ANDAMENTO
 
 # GERAL - TEMOS 1 CENÁRIOS, COMPORTAMENTOS, REGRAS
 
@@ -10,14 +7,13 @@ Feature: MARCAR ITEM DA LISTA COMO CONCLUIDO
 
   COMO usuario
   QUERO poder marcar item da lista TO DO como concluido
-  PARA que possa acompanhar o andamento
+  PARA que possa acompanhar o andamento das tarefas
 
   Background:
     Given que a aplicacao seja acessada
-  # @focus
   # CONCLUIDO _
-  #RN 1 - Todo item deve ter uma descrição e uma data
-  Scenario: Marcar <item> na lista TO DO como concluido
+  #RN 1 - Poder assinalar item como concluido
+  Scenario: Marcar item na lista TODO como concluido
     When tentar marcar item como concluido
-    Then o item é concluido
+    Then o item é marcado como concluido
 

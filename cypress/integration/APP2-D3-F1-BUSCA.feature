@@ -1,7 +1,6 @@
 # https://react-flexy-table.netlify.app/
-# STATUS: - OK
 # GERAL - TEMOS 2 REGRAS, 2 CENÁRIOS, 1 COMPORTAMENTOS CADA
-#DICA ACHEI TIRAR SCREENSHOT DE CADA ETAPA EM UM PRIMEIRO MOMENTO DESNECSSARIO
+#DICA ACHEI TIRAR SCREENSHOT DE CADA ETAPA EM UM PRIMEIRO MOMENTO DESNECESSARIO
 # ASSUMINDO QUE O CYPRESS TEM UM RECURSO DE RODAR PASSO A PASSO
 
 #language: en
@@ -14,7 +13,7 @@ Feature: BUSCAS NA TABELA
   Background:
     Given que a aplicacao seja acessada
 
-  @focus
+  # @focus
   # CONCLUIDO -
   #RN 1 - Poder diferenciar as buscas por maiusculas e minusculas (ex: e-mail)
   Scenario Outline: Poder pesquisar diferenciando maiusculas e minusculas
@@ -33,8 +32,6 @@ Feature: BUSCAS NA TABELA
   Scenario Outline: Poder pesquisar em campos individuais
     When tentar pesquisar "<informacao>" no "<campo>"
     Then o "<resultado>" é encontrado
-    # When se pesquisar a "<informacao2>" com letra minusculas
-    # Then a "<informacao2>" não é encontrada
 
     #DICA A IDEIA USADA NA VALIDACAO FOI PROCURAR UM RESULTADO ASSOCIADO A INFO PROCURADA PRA REFORÇAR QUE A FUNCIONALIDADE ESTÁ OK
     Examples: Insere itens na lista TO DO Casos

@@ -12,7 +12,7 @@ Feature: EDITAR (DISABLE) ITEM NA TABELA
     Given que a aplicacao seja acessada
   # @focus
   # CONCLUIDO -
-  #RN 1 - NÃO PODER EDITAR INFORMAÇÕES
+  #RN 1 - NÃO PODER VIOLAR INFORMAÇÕES
   Scenario Outline: Não poder <action> dados na aplicação
     When tentar <action> uma informação
     Then é disparada uma notificação com a "<mensagem>" referente a ação <action>
