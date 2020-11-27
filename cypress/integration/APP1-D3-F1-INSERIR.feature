@@ -4,7 +4,7 @@
 # EM ANDAMENTO
 # ANULADO
 
-# GERAL - TEMOS 4 CENÁRIOS, COMPORTAMENTOS, REGRAS
+# GERAL - TEMOS 3 CENÁRIOS, COMPORTAMENTOS, REGRAS
 
 #language: en
 Feature: INSERIR ITENS NA LISTA TO DO
@@ -18,20 +18,22 @@ Feature: INSERIR ITENS NA LISTA TO DO
    # @focus
    # CONCLUIDO -
    #RN 1 - Todo item deve ter uma descrição e uma data
-   Scenario Outline: Inserir algum <item> na lista TO DO
-      When tentar inserir "<item>" com "<data>"
-      Then o "<resultado>" é inserido
+   Scenario Outline: <on/off> inserir item <condicao> data na lista TO DO
+      When tentar inserir "<item>" "<condicao>" "<data>"
+      Then o "<resultado>" "<sim/não>" inserido na condição: "<condicao>"
 
       Examples: Insere itens na lista TO DO Casos
-         | item          | data       | resultado     |
-         | item inserido | 2020-11-23 | item inserido |
+         | item          | data       | resultado     | condicao | sim/não | on/off |
+         | item inserido | 2020-11-23 | item inserido | com      | é       |        |
+         | item inserido | data       | item inserido | sem      | não é   | não    |
 
-   # @focus
+   @focus
    # CONCLUIDO -
+   #DICA MANTIVE ESSE CENARIO POIS LI QUE É UM BOA PRATICA PODER ANALISAR COMPORTAMENTOS ISOLADAMENTE
    #RN 2 - Não poder inserir item com menos de 5 caracter
-   Scenario Outline: Inserir algum <item> na lista TO DO
+   Scenario Outline: Não poder inserir item com menos de 5 caracteres
       When tentar inserir "<descricao>"
-      Then o chegamos ao "<resultado>"
+      Then chegamos ao "<resultado>"
 
       Examples: Insere itens VAZIOS na lista TO DO Casos
          | descricao | resultado                  |
@@ -47,18 +49,6 @@ Feature: INSERIR ITENS NA LISTA TO DO
       Examples: Insere itens na lista TO DO Casos
          | item  | data       | resultado     |
          | vazio | 2020-11-23 | item inserido |
-
-   # @focus
-   #RN 4 - Não pode inserir item na lista TO DO sem data
-   # CRIEI UM NOVO CENÁRIO POIS A FORMA DE VERIFICAR É DIFERENTE
-   # CONCLUIDO -
-   Scenario Outline: Não poder inserir algum <item> na lista TO DO sem data
-      When tentar inserir "<item>" sem data
-      Then o item não é inserido
-
-      Examples: Insere itens na lista TO DO Casos
-         | item  |
-         | valor |
 
 
 #REQUISITOS OBRIGATORIOS

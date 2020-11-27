@@ -1,10 +1,11 @@
 ///<reference types="cypress"/>
 import tester from '../common/APP1-D3'
 
+//CONCLUIDO -
 When('tentar inserir {string}', (descricao) => {
-  cy.get('#title').as('entrada').type(descricao)
+  tester.descricaoInvalida(descricao)
 });
 
-Then('o chegamos ao {string}', (resultado) => {
-  cy.get('.ant-row-center > .ant-typography').should('contain', resultado)
+Then('chegamos ao {string}', (resultado) => {
+  tester.verificaError(resultado)
 });
